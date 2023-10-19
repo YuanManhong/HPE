@@ -12,9 +12,9 @@ public class EmployeeManager {
         Employee employee2 = new Employee("f2","l2","2","2@gmail.com","t2");
         Employee employee3 = new Employee("f3","l3","3","3@gmail.com","t3");
 
-        list.addEmployee(employee1);
-        list.addEmployee(employee2);
-        list.addEmployee(employee3);
+        list.getEmployeeList().add(employee1);
+        list.getEmployeeList().add(employee2);
+        list.getEmployeeList().add(employee3);
     }
 
     public Employees getAllEmployees(){
@@ -22,6 +22,10 @@ public class EmployeeManager {
     }
 
     public void addEmployee(Employee e){
-        list.addEmployee(e);
+        list.getEmployeeList().add(e);
     }
+    public void removeEmployee(Employee e){
+        list.getEmployeeList().remove(e);
+    }
+
 }

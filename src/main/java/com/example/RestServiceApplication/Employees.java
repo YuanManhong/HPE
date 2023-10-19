@@ -9,8 +9,8 @@ public class Employees {
 
 
     public List<Employee> getEmployeeList() {
-        if (employeeList == null){
-            return new ArrayList<>();
+        if (employeeList == null) {
+            employeeList = new ArrayList<>(); // if you write return new ArrayList<>(), then no one store it
         }
         return employeeList;
     }
@@ -20,22 +20,10 @@ public class Employees {
     }
 
     public int getNumOfEmployees() {
-        return numOfEmployees;
+        if (employeeList == null){
+            return 0;
+        }
+        return employeeList.size();
     }
 
-    public boolean addEmployee(Employee e){
-        if(employeeList.add(e)){
-            numOfEmployees++;
-            return true;
-        }
-        return false;
-    }
-
-    public boolean deleteEmployee(Employee e){
-        if(employeeList.remove(e)){
-            numOfEmployees--;
-            return true;
-        }
-        return false;
-    }
 }
