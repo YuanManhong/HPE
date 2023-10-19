@@ -3,7 +3,7 @@ package com.example.RestServiceApplication;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class EmployeeDAO {
+public class EmployeeManager {
     private static Employees list = new Employees();
 
     static
@@ -19,5 +19,9 @@ public class EmployeeDAO {
 
     public Employees getAllEmployees(){
         return list;
+    }
+
+    public void addEmployee(Employee e){
+        list.addEmployee(e);
     }
 }
